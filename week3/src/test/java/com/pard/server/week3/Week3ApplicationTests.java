@@ -8,7 +8,6 @@ class Week3ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		//eqweqw
 	}
 
 }

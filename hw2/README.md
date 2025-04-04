@@ -9,6 +9,13 @@
 
 그럼 가보자 나의 형제들아.
 
+++ 사진크기 줄이지 못해 미안합니다. 지금 너무 귀찮아서요. 좀 멀리서 봐줘요.
+
+https://velog.io/@chianddo223/Layered-Architecture
+
+https://velog.io/@chianddo223/%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80-Annotations
+정리한 내용을 모두 올리기에는 시간이 많이 걸릴 것 같아 급한대로.
+
 #### 나의 C R U D 하나하나씩 뜯어보자꾸나.
 
 ---
@@ -258,3 +265,6 @@ public void delete(String movieName) {
 ```
 
 세미나때랑 별차이 없다. 아 배고프고 피곤하고 미쳐버리것다. 이쯤하자 CRUD 자식아 만나서 반가웠다.
+
+
+

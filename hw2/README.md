@@ -14,6 +14,7 @@
 https://velog.io/@chianddo223/Layered-Architecture
 
 https://velog.io/@chianddo223/%EC%97%AC%EB%9F%AC%EA%B0%80%EC%A7%80-Annotations
+
 정리한 내용을 모두 올리기에는 시간이 많이 걸릴 것 같아 급한대로.
 
 #### 나의 C R U D 하나하나씩 뜯어보자꾸나.

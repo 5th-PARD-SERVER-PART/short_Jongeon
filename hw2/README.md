@@ -49,6 +49,8 @@ builder 패턴으로 저장하고 put 조져버린다. Create 끝.
 
 ---
 # R
+
+---
 Read. 오늘따라 오석에 자리가 텅텅 비었군 마치 나의 마음을 읽은듯.
 
 나는 Read에 힘을 좀 썼다. 그래야할 것 같아서. 이것저것 꽤나 욕심내어 건드려봤다. 원하는 대로 됐던 것도 있고, 그렇지 못했던 것도 있었다. 그것이 인생이지 이제는 두렵지않다.
@@ -161,6 +163,11 @@ public UserDto findMovieByNameAndTheater(String movieName, String theater) {
 # U
 Update.
 
+내 뒤에계신 17학번 토레이 왕고 성엽이 형님께 얼마동안 계셨냐고 물어보니 오석에 2시부터 계셨다고, 
+3시간 정도밖에 안 있었다고 하신다. 
+
+지금은 7시인데. 업데이트가 안되신 모양이다. 그러실만도 하지. 성엽이형 항상 사랑합니다.
+
 #### Controller.
 ```
 @PatchMapping("/{movieName}")
@@ -178,9 +185,50 @@ public void updateTheaterByMovieName(String movieName, TheaterDto theaterDto){
     }
 ```
 
-# D
-Delete.
+기가맥힌 Update를 하기위해 여러 방법을 시도했으나 결국 실패했다. 괜찮다. 결국 전체적인 흐름은 세미나때 코드와 거의 동일하다.
 
+#### 하지만 but~
+
+```
+public class TheaterDto {
+    private String theater;
+}
+
+```
+
+상영관만 입력하는 DTO를 받고싶어 TheaterDto를 따로 만들어 받는다. 그리고 입력된 movieName에 해당하는 user에다가 그 녀석을 update해버린다.
+```
+public class User {
+    private String movieName;
+    private String theater;
+    private int screenTime;
+
+    public void updateTheater(String theater){
+        this.theater = theater;
+    }
+}
+```
+또한 Entity에서는 @Setter 사용을 지양해야 한다는 것을 알게 되어 업데이트 메소드를 따로 만들어 드렸다.
+
+결과적으로 입력받은 TheaterDto에 상영관을 updateTheater 메소드에 넣어 user을 업데이트 해버린다.
+
+### -실행예시_
+
+![update_01.png](captures/update_01.png)
+
+이녀석을
+
+![update_02.png](captures/update_02.png)
+
+이렇게 영화 "김종언최고"와 함께 필요한 theater만 입력해주면,
+
+![update_03.png](captures/update_03.png)
+
+요롷게 업데이트가 되는 모습!! 김종언 최고!!
+
+---
+# D
+Delete. 제거는 소리없이 깔끔하게.
 #### Controller.
 ```
  @DeleteMapping("/{movieName}")
@@ -196,3 +244,5 @@ public void delete(String movieName) {
         db.remove(movieName);
     }
 ```
+
+세미나때랑 별차이 없다. 아 배고프고 피곤하고 미쳐버리것다. 이쯤하자 CRUD 자식아 만나서 반가웠다.

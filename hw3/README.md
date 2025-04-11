@@ -93,3 +93,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
 짠 모든 테이블이 싹 사라진 모습!(역재생 아닙니다)
 
+공부한 내용을 리드미에 직접 쓰고싶지만 항상 시간이 부족하네요.
+
+정리해둔 자료를 투척하고 이만 사라져보겠습니다람쥐
+
+https://velog.io/@chianddo223/JDBC-JPA

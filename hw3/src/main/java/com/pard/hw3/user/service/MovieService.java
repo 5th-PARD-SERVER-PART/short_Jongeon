@@ -67,6 +67,7 @@ public class MovieService {
         movieRepository.delete(movie);
     }
 
+    @Transactional
     public void deleteMoviesByTheater(String theater) {
         movieRepository.deleteByTheater(theater);
     }

@@ -41,9 +41,10 @@ public class MovieContorller {
         movieService.delete(movieName);
     }
 
+
     @DeleteMapping("/theater/{theater}")
     public ResponseEntity<String> deleteMoviesByTheater(@PathVariable String theater) {
         movieService.deleteMoviesByTheater(theater);
-        return ResponseEntity.ok(theater + "삭제했다");
+        return ResponseEntity.ok(theater + " 다 삭제했다");
     }
 }

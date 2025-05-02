@@ -5,10 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import pard.server.com.hw4.user.userRequest.UserSignUpDto;
 import pard.server.com.hw4.user.userService.UserService;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/user")
 public class UserController {

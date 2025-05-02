@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor @NoArgsConstructor @Builder
 public class CreatePostDto {
     private String contents;
-    private Long userId;
+    private Long user_id;
 }

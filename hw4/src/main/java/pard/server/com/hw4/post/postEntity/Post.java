@@ -28,8 +28,9 @@ public class Post {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public void updateContents(String postContents){
-        this.postContents = postContents;
+    public void updateContents(String postContent){
+        System.out.println(postContent);
+        this.postContents = postContent;
     }
 
 

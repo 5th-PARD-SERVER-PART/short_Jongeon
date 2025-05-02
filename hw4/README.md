@@ -151,7 +151,7 @@ signup? 잘 ~ 됩니다.
 createPost? 잘 ~ 됩니다.
 
 ![readPosts.png](captures/readPosts.png)
-readPosts? 잘 ~~ 됩니다.
+readPosts? 잘 ~~ 됩니다.[Downloads](../../../Downloads)
 
 ![Patch1.png](captures/Patch1.png)
 ![Patch2.png](captures/Patch2.png)

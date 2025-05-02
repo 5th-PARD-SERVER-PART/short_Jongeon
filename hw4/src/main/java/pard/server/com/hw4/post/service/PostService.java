@@ -33,7 +33,7 @@ public class PostService {
         List<Post> posts = postRepo.findAllByUser(user);
         List<PostsResponseDto> postDtos = posts.stream()
                 .map(post -> PostsResponseDto.builder()
-                        .post_id(post.getPost_id())
+                        .post_id(post.getId())
                         .postContents(post.getPostContents())
                         .postedTime(post.getPostedTime())
                         .build()).toList();

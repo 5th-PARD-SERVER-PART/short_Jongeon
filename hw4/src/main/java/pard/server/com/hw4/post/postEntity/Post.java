@@ -29,9 +29,7 @@ public class Post {
     private User user;
 
     public void updateContents(String postContent){
-        System.out.println(postContent);
         this.postContents = postContent;
     }
-
 
 }

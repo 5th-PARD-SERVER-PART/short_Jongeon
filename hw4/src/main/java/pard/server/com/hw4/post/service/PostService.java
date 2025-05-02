@@ -19,9 +19,7 @@ public class PostService {
     private final UserRepo userRepo;
 
     public void createPost(CreatePostDto createPostDto){
-        System.out.println(createPostDto.getUser_id() + "www");
         User u = userRepo.findById(createPostDto.getUser_id()).orElseThrow();
-        System.out.println("wqeqwee" );
         Post p = Post.builder()
                 .postContents(createPostDto.getContents())
                 .user(u)

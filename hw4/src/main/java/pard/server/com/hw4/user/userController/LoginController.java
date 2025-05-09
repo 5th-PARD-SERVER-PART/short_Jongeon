@@ -9,4 +9,9 @@ public class LoginController {
     public String login(){
         return "loginForm";
     }
+
+    @GetMapping("/home")
+    public String loginSucces(){
+        return "home";
+    }
 }

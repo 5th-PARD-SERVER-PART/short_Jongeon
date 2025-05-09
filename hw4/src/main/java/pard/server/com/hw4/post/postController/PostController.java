@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import pard.server.com.hw4.post.postRequest.CreatePostDto;
 import pard.server.com.hw4.post.postRequest.PatchRequest;
+import pard.server.com.hw4.post.postRequest.UserAndPostId;
 import pard.server.com.hw4.post.postResponse.PostsResponseDto;
 import pard.server.com.hw4.post.service.PostService;
 
@@ -36,5 +37,10 @@ public class PostController {
     @DeleteMapping("/{postId}")
     public void deletePost(@PathVariable Long postId){
         postService.deletePost(postId);
+    }
+
+    @PatchMapping("/like")
+    public void clickLike(@RequestBody UserAndPostId userAndPostId){
+        postService.clickLike(userAndPostId);
     }
 }

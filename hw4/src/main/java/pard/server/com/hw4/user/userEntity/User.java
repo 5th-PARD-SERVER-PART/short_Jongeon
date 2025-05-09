@@ -22,10 +22,13 @@ public class User {
 
     private String name;
     private String password;
+    private String email;
+    private String socialID; // 구글에서 할당해주는 사용자 고유의 아이디
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Post> posts;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Loke> likes;
+
 }

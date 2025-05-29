@@ -26,4 +26,9 @@ public class PostController {
     public List<ResponseDto> readPostsBySubject(@PathVariable String tag){
         return postService.readPostsBySubject(tag);
     }
+
+    @GetMapping("/tags")
+    public TagsDto readTags(){
+        return postService.readTags();
+    }
 }

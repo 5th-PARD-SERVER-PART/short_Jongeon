@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -25,9 +26,5 @@ public class Post {
     private String tag;
     private String content;
     private String question;
-    private static int count = 0;
 
-    public static void plusCount(){
-        count ++;
-    }
 }

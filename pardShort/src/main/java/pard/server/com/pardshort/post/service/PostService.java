@@ -23,8 +23,8 @@ public class PostService {
                 .question(requestDto.getQuestion())
                 .build();
 
-        Post.plusCount();
         postRepo.save(post);
+
     }
 
     public List<ResponseDto> readPostsBySubject(String tag){
@@ -36,6 +36,14 @@ public class PostService {
                         .question(post.getQuestion())
                         .tag(post.getTag())
                         .build()).toList();
+    }
+
+    public TagsDto readTags(){
+
+        return TagsDto.builder()
+                .tags(postRepo.findDistinctTags())
+                .count(postRepo.count())
+            .build();
     }
 }
 

@@ -7,7 +7,6 @@ import java.util.List;
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor @Builder
 public class TagsDto {
-    private int count;
+    private Long count;
     private List<String> tags;
-
 }
